@@ -64,3 +64,19 @@ app.listen('/300'(req,res))
 {
     res.send("server listening at",3000)
 }
+
+// Closure in a Loop
+// Question: Fix the issue in this code so that it prints 0 1 2 3 4 instead of 5 5 5 5 5.
+
+for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log(i);
+    }, 1000);
+}
+
+//answer, do google it why it is happing
+for (let i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log(i);
+    }, 1000);
+}
