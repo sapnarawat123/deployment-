@@ -45,3 +45,22 @@ const counter = outer();
 counter(); // ?1
 counter(); // ?2
 counter(); // ?3
+
+///////////Write an Express.js middleware that logs request details.
+
+var express= require ('express');
+var app = express();
+
+app.use(function(req,res,next){
+    res.send("this is middleware")
+    next();
+})
+
+app.get('/login',function(){
+    console.log("login page")
+})
+
+app.listen('/300'(req,res))
+{
+    res.send("server listening at",3000)
+}
