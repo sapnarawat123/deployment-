@@ -28,3 +28,20 @@ there are 3 ways to do that
 3. Many-to-Many Relationship (Using an Array of References)
 */
 
+
+
+//closure example
+function outer() {
+    let count = 0;
+     function inner() {
+        console.log("count1",count)
+        count++;
+        console.log(count);
+    };
+    return inner;
+}
+
+const counter = outer();
+counter(); // ?1
+counter(); // ?2
+counter(); // ?3
