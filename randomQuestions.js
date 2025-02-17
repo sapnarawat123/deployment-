@@ -91,3 +91,18 @@ for (var i = 0; i < 5; i++) {
     })(i);
 }
 // Here, the IIFE immediately captures the value of i for each loop iteration, fixing the issue.
+
+
+// Question: Implement a function that acts as a counter.
+function createCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+var coun = createCounter();
+console.log(coun()); // 1
+console.log(coun()); // 2
+console.log(coun()); // 3
