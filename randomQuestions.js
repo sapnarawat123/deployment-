@@ -80,3 +80,14 @@ for (let i = 0; i < 5; i++) {
         console.log(i);
     }, 1000);
 }
+
+// even with var, we can fix the issue by capturing i inside an Immediately Invoked Function Expression (IIFE).
+
+for (var i = 0; i < 5; i++) {
+    (function(i) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    })(i);
+}
+// Here, the IIFE immediately captures the value of i for each loop iteration, fixing the issue.
